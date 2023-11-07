@@ -42,16 +42,17 @@ var
   ret : scs_s32_t;
   yy : scs_string_t;
   texto : UTF8Char;
-  comun: scs_sdk_init_params_v100_t;
+  common: scs_sdk_init_params_v100_t;
   initParams : p_scs_telemetry_init_params_t;
 begin
   texto := UTF8Char('a');
 
-  comun.game_name := @texto;
-  comun.game_version := 0;
-  comun.log := pLog;
+  common.game_name := @texto;
+  common.game_id := AnsiChar(10);
+  common.game_version := 0;
+  //common.log := pLog;
 
-  initParams.common:= comun;
+  initParams.common:= common;
 
   ret := scs_telemetry_init(65536, initParams);
   try
