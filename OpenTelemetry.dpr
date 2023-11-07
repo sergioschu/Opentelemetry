@@ -2,8 +2,7 @@ program OpenTelemetry;
 
 uses
   Vcl.Forms,
-  uPrincipal in '..\uPrincipal.pas' {Form1},
-  PascalSDK in 'Classes\PascalSDK.pas';
+  uPrincipal in 'Views\uPrincipal.pas' {Form1};
 
 {$R *.res}
 
